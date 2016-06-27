@@ -10,6 +10,17 @@ describe Archare do
 	it 'should return introdution' do
 		intro = Archare.introduce
     expect(intro).to eq("This is the gem for archare")
-
 	end
+
+  it 'should return Crawler instance' do
+    crawler = Archare.crawler
+    expect(crawler.class).to eq(Archare::Crawler)
+  end
+
+
+  it 'should return all the algorithm problem names of leetcode' do
+    crawler = Archare.crawler
+    problems = crawler.lc_algorithm_problem
+    expect(problems.class).to eq(Array)
+  end
 end

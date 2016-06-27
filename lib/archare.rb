@@ -1,23 +1,20 @@
 require "archare/version"
 require "archare/introducer"
+require "archare/crawler"
 
-require 'nokogiri'
-require 'curb'
 
 
 module Archare
   def self.introduce 
 
-    page = Curl.get("http://www.google.com/")
-
-
-    page2 = Nokogiri::HTML(page.body_str)
-
-    puts page2.xpath('//a')
-    # puts page.body_str
-
-
   	introducer = Introducer.new
   	introducer.introduce
   end
+
+  @@crawler = nil
+  def self.crawler
+    @@crawler = Crawler.new unless @@crawler
+    return @@crawler
+  end
+
 end
