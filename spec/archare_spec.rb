@@ -7,9 +7,8 @@ require 'spec_helper'
 
 describe Archare do
 
-	it 'should return introdution' do
+	it 'should puts introdution' do
 		intro = Archare.introduce
-    expect(intro).to eq("This is the gem for archare")
 	end
 
   it 'should return Crawler instance' do
@@ -18,9 +17,29 @@ describe Archare do
   end
 
 
-  it 'should return all the algorithm problem names of leetcode' do
-    crawler = Archare.crawler
-    problems = crawler.lc_algorithm_problem
-    expect(problems.class).to eq(Array)
-  end
+  # it 'should return an array consists of all the algorithm problem names of leetcode' do
+  #   crawler = Archare.crawler
+  #   problems = crawler.lc_problems
+  #   expect(problems.class).to eq(Array)
+  # end
+
+  # it 'should return an array consists of all the tag names of leetcode algorithm problems' do
+  #   crawler = Archare.crawler
+  #   tags = crawler.lc_tags
+  #   expect(tags.class).to eq(Array)
+  # end
+
+  # it 'should return a hash map consists of tag - problems maps' do
+  #   crawler = Archare.crawler
+  #   map = crawler.lc_tags_problems_map
+  #   expect(map.class).to eq(Hash)
+
+  #   puts map
+  # end
+
+
+  # it 'should update the tag_problem_map json file' do
+  #   crawler = Archare.crawler
+  #   crawler.update_lc_data
+  # end
 end
