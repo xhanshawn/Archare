@@ -33,6 +33,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "nokogiri"
   spec.add_development_dependency "curb"
+
+
+  spec.add_dependency "nokogiri"
+  spec.add_dependency "curb"
   # spec.add_development_dependency "rspec-nc"
   # spec.add_development_dependency "guard"
   # spec.add_development_dependency "guard-rspec"
