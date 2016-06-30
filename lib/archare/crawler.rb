@@ -35,16 +35,18 @@ class Archare::Crawler
           # problems << href_str.split('problems/')[-1][0..-2].gsub('-', ' ')
         end
       end
+
+      write_json_file "lc_problems", {"problems" => problems}
     end
 
     return problems
   end
 
 
-  def lc_tags(update = false, uri = @@LEETCODE_URI_TAG)
+  def lc_tags(update = false, uri = @@LEETCODE_URI_PROBLEM)
     
     tags = []
-
+    tags_hash = {}
     unless update 
       tags_hash = read_json_file "lc_tags"
       tags = tags_hash['tags']
@@ -56,6 +58,9 @@ class Archare::Crawler
           tags << href_str.split('tag/')[-1][0..-2]
         end
       end
+
+      tags_hash['tags'] = tags
+      write_json_file "lc_tags", tags_hash
     end
 
     return tags
@@ -69,20 +74,28 @@ class Archare::Crawler
     unless update 
       map = read_json_file "lc_tags_problems_map"
     else
-      tags = lc_tags
-      tags.each do |tag|
-        map[tag] = lc_problems(lc_tag_uri_of(tag))
+      tags = lc_tags(true)
+
+      puts "updating tags-problems map. It will finish in about 1 minute \n\n"
+      tags.each_with_index do |tag, i|
+        
+        map[tag] = lc_problems(true, lc_tag_uri_of(tag))
+        print "\033[1A \r #{i + 1} of #{tags.length} tags: #{tag}                                        \n"
+        $stdout.flush
       end
 
       write_json_file "lc_tags_problems_map", map
     end
+
+    puts tags, map
 
     return map
   end
 
 
   def update_lc_data
-    map = lc_tags_problems_map true
+    lc_tags_problems_map true
+    lc_problems true
   end
 
   private 
@@ -97,7 +110,7 @@ class Archare::Crawler
     end
 
     def file_directory
-      File.join(File.dirname(File.expand_path(__FILE__)), '/data')
+      File.join(File.dirname(File.expand_path(__FILE__)), '/data/')
     end
 
     def write_json_file(file_name, map)
@@ -107,6 +120,7 @@ class Archare::Crawler
     end
 
     def read_json_file(file_name)
+      map = {}
       File.open(file_directory + file_name + ".json", 'r') do |f|
         map = JSON.parse(f.read)
       end

@@ -11,10 +11,9 @@ module Archare
   	introducer.introduce
   end
 
-  # @@crawler = nil
+
   def self.crawler
-    # @@crawler = Crawler.new unless @@crawler
-    # return @@crawler
+
     Crawler.instance
   end
 

@@ -2,6 +2,11 @@
 
 Archare gem
 
+Currently archare provides a crawler to collect data from a algorithm online judge website [Leetcode](https://leetcode.com/).
+Leetcode is a very good website for programmer to learn, practice and challenge some algorithm problems.
+
+As a user of Leeet code, I believe that we could take advantage of the data on Leetcode to analyze and generalize some good ways to understand algorithm problems.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,7 +25,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+  Archare crawler
+
+      Usage:
+        crawler = Archare.crawler
+
+        leetcode tags:
+          crawler.lc_tags
+
+        leetcode problems:
+          crawler.lc_problems
+
+        leetcode tags-problems map:
+          crawler.lc_tags_problems_map
+
+      Update data from leetcode:
+        crawler.update_lc_data         (updating time is about 1 minute)
+
+
 
 ## Development
 
