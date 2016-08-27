@@ -4,16 +4,60 @@
 		"selected_items":
 		[
 			[
+				"lc",
+				"lc_tags"
+			],
+			[
+				"lc_",
+				"lc_problems"
+			],
+			[
+				"prob",
+				"problems"
+			],
+			[
+				"tags",
+				"tags_hash"
+			],
+			[
+				"pro",
+				"problems"
+			],
+			[
+				"read",
+				"read_json_file"
+			],
+			[
+				"lc_tags",
+				"lc_tags_problems_map"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"Ar",
+				"Archare"
+			],
+			[
+				"get",
+				"get_dom_from_uri"
+			],
+			[
+				"href",
+				"href_str"
+			],
+			[
+				"AR",
+				"Archare"
+			],
+			[
 				"in",
 				"introduce"
 			],
 			[
 				"Inter",
 				"introducer"
-			],
-			[
-				"AR",
-				"ArchareUI"
 			],
 			[
 				"dev",
@@ -200,10 +244,6 @@
 				"packageName"
 			],
 			[
-				"tags",
-				"tags-tree"
-			],
-			[
 				"cns",
 				"console"
 			],
@@ -326,10 +366,6 @@
 			[
 				"mo",
 				"mouseover"
-			],
-			[
-				"get",
-				"getBBox"
 			],
 			[
 				"tran",
@@ -478,42 +514,6 @@
 			[
 				"hidd",
 				"hidden_input"
-			],
-			[
-				"numb",
-				"numberOfIslands2"
-			],
-			[
-				"cm",
-				"cm_res"
-			],
-			[
-				"cac",
-				"cacheMiss"
-			],
-			[
-				"Linke",
-				"LinkedHashMap"
-			],
-			[
-				"ms",
-				"ms_res"
-			],
-			[
-				"GET",
-				"getWindowMinSum"
-			],
-			[
-				"add",
-				"addContent"
-			],
-			[
-				"S",
-				"Schedule"
-			],
-			[
-				"wi",
-				"waiting_q"
 			]
 		]
 	},
@@ -523,15 +523,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 1060,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/archare.rb",
-			"settings":
-			{
-				"buffer_size": 157,
+				"buffer_size": 1779,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,15 +531,23 @@
 			"file": "archare.gemspec",
 			"settings":
 			{
-				"buffer_size": 1551,
+				"buffer_size": 1763,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Rakefile",
+			"file": "lib/archare.rb",
 			"settings":
 			{
-				"buffer_size": 398,
+				"buffer_size": 237,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/archare/crawler.rb",
+			"settings":
+			{
+				"buffer_size": 2803,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,18 +555,15 @@
 			"file": "spec/archare_spec.rb",
 			"settings":
 			{
-				"buffer_size": 323,
+				"buffer_size": 2720,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "guard 'rspec' do\n	\nend",
-			"file": "Guardfile",
-			"file_size": 22,
-			"file_write_time": 131113435340000000,
+			"file": "lib/archare/introducer.rb",
 			"settings":
 			{
-				"buffer_size": 22,
+				"buffer_size": 438,
 				"line_ending": "Unix"
 			}
 		}
@@ -666,7 +663,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 367.0,
 		"last_filter": "Package Control: ",
 		"selected_items":
 		[
@@ -687,13 +684,14 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 471.0
+		"width": 378.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
+			"ls",
 			"clear"
 		]
 	},
@@ -708,11 +706,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/hanxu/Documents/workspace/ruby/archare"
+		"/Users/hanxu/Documents/workspace/ruby/archare",
+		"/Users/hanxu/Documents/workspace/ruby/archare/lib",
+		"/Users/hanxu/Documents/workspace/ruby/archare/lib/archare",
+		"/Users/hanxu/Documents/workspace/ruby/archare/lib/archare/data",
+		"/Users/hanxu/Documents/workspace/ruby/archare/spec"
 	],
 	"file_history":
 	[
+		"/Users/hanxu/Documents/workspace/ruby/archare/spec/spec_helper.rb",
+		"/Users/hanxu/Documents/workspace/ruby/archare/.travis.yml",
+		"/Users/hanxu/Documents/workspace/ruby/archare/lib/archare/crawler.rb",
+		"/Users/hanxu/Documents/workspace/ruby/archare/lib/archare/tags_problems_map.json",
 		"/Users/hanxu/Documents/workspace/ruby/archare/lib/archare/introducer.rb",
+		"/Users/hanxu/Documents/workspace/ruby/archare/archare.gemspec",
+		"/Users/hanxu/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/hanxu/Documents/workspace/ruby/archare/Guardfile",
+		"/Users/hanxu/Documents/workspace/ruby/archare/Rakefile",
 		"/Users/hanxu/Documents/workspace/ruby/archare/archare.sublime-project",
 		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/stylesheets/archare-sass.scss",
 		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/javascripts/ah-ui-js.js",
@@ -831,19 +841,11 @@
 		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/helpers/posts_helper.rb",
 		"/Users/hanxu/Documents/spring2016/ece5720/midterm/p3/wc_tb.v",
 		"/Users/hanxu/Documents/spring2016/ece5720/midterm/p3/word_counter.v",
-		"/Users/hanxu/Documents/spring2016/ece5720/midterm/p3/word_counter.py",
-		"/Users/hanxu/workspace/mianjing/cloudheath/playground.rb",
-		"/Users/hanxu/Documents/fileofOLD/Fall 2015/5722/midterm/xhanmid/xhanMidTerm/sorter_tb.v",
-		"/Users/hanxu/Documents/fileofOLD/Fall 2015/5722/final/finalPackage/problem1/ShiftCounter.v",
-		"/Users/hanxu/workspace/mianjing/cloudheath/playground.ruby",
-		"/Users/hanxu/workspace/mianjing/amazon/OA2.java",
-		"/Users/hanxu/workspace/mianjing/amazon/Playground.java",
-		"/Users/hanxu/Desktop/hw5/c_tb.v.bak",
-		"/Users/hanxu/workspace/mianjing/aristanw/Arista/removeValues_q.c"
+		"/Users/hanxu/Documents/spring2016/ece5720/midterm/p3/word_counter.py"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -858,6 +860,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"update_maps",
+			"algorithms",
 			"boo",
 			"padding",
 			"xh-edu",
@@ -983,9 +987,7 @@
 			"type",
 			"is_deve",
 			"type",
-			"is_deve",
-			"type",
-			"is_dev"
+			"is_deve"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1003,7 +1005,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1012,43 +1014,75 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1060,
+						"buffer_size": 1779,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22,
-								22
+								964,
+								964
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "lib/archare.rb",
+					"file": "archare.gemspec",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 157,
+						"buffer_size": 1763,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
+								1395,
+								1395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 116.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/archare.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
 							]
 						],
 						"settings":
@@ -1063,20 +1097,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "archare.gemspec",
+					"buffer": 3,
+					"file": "lib/archare/crawler.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1551,
+						"buffer_size": 2803,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1546,
-								1546
+								2049,
+								2049
 							]
 						],
 						"settings":
@@ -1086,38 +1120,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 26.0,
+						"translation.y": 920.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Rakefile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 398,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								373,
-								373
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1126,56 +1132,58 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 323,
+						"buffer_size": 2720,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								286,
-								286
+								2530,
+								2530
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-							"tab_size": 2
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "lib/archare/introducer.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Guardfile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 22,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18,
-								18
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-							"tab_size": 2
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
