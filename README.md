@@ -40,7 +40,7 @@ Or install it yourself as:
           crawler.lc_tags_problems_map
 
       Update data from leetcode:
-        crawler.update_lc_data         (updating time is about 1 minute)
+        crawler.update_lc_data         (updating time is about 20s)
 
 
 
