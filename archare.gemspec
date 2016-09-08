@@ -33,10 +33,14 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.4"
   spec.add_development_dependency "nokogiri", "~> 1.6"
   spec.add_development_dependency "curb", "~> 0.9"
-
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency 'pry-remote'
+  spec.add_development_dependency 'pry-stack_explorer'
+  spec.add_development_dependency "pry-byebug"
 
   spec.add_dependency "nokogiri", "~> 1.6"
   spec.add_dependency "curb", "~> 0.9"
+  spec.add_dependency "ohai", "~> 8.19.2"
   # spec.add_development_dependency "rspec-nc"
   # spec.add_development_dependency "guard"
   # spec.add_development_dependency "guard-rspec"
