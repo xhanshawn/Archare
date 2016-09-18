@@ -18,19 +18,23 @@ class Archare::Crawler
     problems = []
 
     if update
-      body = get_dom_from_uri(uri)
-      problem_list = body.css('table')
-      links = problem_list.css('a').each do |link|
-        href_str = link['href'].to_s
-        if href_str.include? '/problems/'
-          problems << link.text
-          # problems << href_str.split('problems/')[-1][0..-2].gsub('-', ' ')
+      if uri != LEETCODE_URI_PROBLEM
+        body = get_dom_from_uri(uri)
+        problem_list = body.css('table')
+        links = problem_list.css('a').each do |link|
+          href_str = link['href'].to_s
+          if href_str.include? '/problems/'
+            problems << link.text
+            # problems << href_str.split('problems/')[-1][0..-2].gsub('-', ' ')
+          end
         end
+        write_json_file "lc_problems", { :problems => problems }
+      else
+        update_lc_data
       end
-      write_json_file "lc_problems", { :problems => problems }
     else
-      tags_hash = read_json_file "lc_problems"
-      problems = tags_hash["problems"]
+      problems_h = read_json_file "lc_problems"
+      problems = problems_h["problems"]
     end
     problems
   end
@@ -61,6 +65,7 @@ class Archare::Crawler
     map = update ? {} : read_json_file("lc_tags_problems_map")
 
     if update
+      @updating = true
       problems = []
       tags = lc_tags(true)
       puts "updating tags-problems map. It will finish in about 20s \n\n"
@@ -73,6 +78,7 @@ class Archare::Crawler
         }
       }
       threads.each { |t| t.join }
+      @updating = false
       write_json_file "lc_problems", { :problems => problems }
       write_json_file "lc_tags_problems_map", map
     end
@@ -80,7 +86,15 @@ class Archare::Crawler
   end
 
   def update_lc_data
+    return if @updating
+    clear_data
     lc_tags_problems_map true
+  end
+
+  def clear_data
+    write_json_file "lc_problems", {}
+    write_json_file "lc_tags", {}
+    write_json_file "lc_tags_problems_map", {}
   end
 
   private 
